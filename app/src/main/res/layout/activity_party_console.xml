@@ -1,0 +1,119 @@
+<LinearLayout
+    android:id="@+id/consolemain_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".host.PartyConsole">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/consoletoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/consoletab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/consoletoolbar"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/consolepager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/consoletab_layout"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/textView"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:layout_below="@id/consolepager">
+
+
+        <TextView
+            android:text="Song Title"
+            android:textColor="#A9F5F2"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/textView"
+            android:id="@+id/songname"
+            android:textAppearance="@android:style/TextAppearance.Widget.Button"
+            android:textSize="15sp"
+            android:typeface="monospace"
+            android:layout_width="330dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:layout_weight="1"
+            />
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignTop="@id/textView"
+                android:id="@+id/playbutton"
+                android:background="@android:drawable/ic_media_play"
+                android:visibility="visible"
+                android:backgroundTint="#A9F5F2"
+
+                android:layout_alignBottom="@+id/consolepager"
+                android:onClick="onPlay"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignTop="@id/textView"
+                android:id="@+id/pausebutton"
+                android:background="@android:drawable/ic_media_pause"
+                android:visibility="invisible"
+                android:backgroundTint="#A9F5F2"
+
+                android:layout_alignBottom="@+id/consolepager"
+                android:onClick="onPause"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <Button
+
+            android:id="@+id/stopbutton"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/consolepager"
+            android:layout_alignParentEnd="true"
+
+            android:background="@android:drawable/alert_light_frame"
+            android:backgroundTint="#A9F5F2"
+            android:onClick="onStop"
+            android:visibility="visible" />
+        />
+    </LinearLayout>
+
+</LinearLayout>

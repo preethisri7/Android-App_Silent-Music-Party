@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Confetti</string>
+    <string name="partyhost">Start a Party!!</string>
+    <string name="search">Search for parties..</string>
+
+    <string name="menuoption">My Profile</string>
+    <string name="selectsongtext">Select songs to be added to playlist..</string>
+
+    <string name="createplaylist">CREATE PLAYLIST</string>
+    <string name="title_activity_party_home">PartyHome</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_exitparty">Exit Party</string>
+    <string name="action_endparty">End Party</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
